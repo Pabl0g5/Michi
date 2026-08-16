@@ -1,0 +1,102 @@
+/* CSS for Footer component */
+
+.site-footer {
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    background-color: #fafafa;
+}
+
+.footer-container {
+    width: min(100% - 48px, 1200px);
+    margin: 0 auto;
+    padding: 64px 0 24px;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.footer-column {
+    min-width: 0;
+}
+
+.footer-column h3 {
+    margin: 0 0 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #171717;
+}
+
+.footer-column nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.footer-column nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column nav a {
+    color: #737373;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-decoration: none;
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.footer-column nav a:hover {
+    color: #171717;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #a3a3a3;
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        width: min(100% - 32px, 1200px);
+        padding: 48px 0 20px;
+    }
+
+    .footer-columns {
+        grid-template-columns: repeat(2, 1f);
+        gap: 40px 32px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+    }
+}

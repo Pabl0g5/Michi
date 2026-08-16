@@ -7,6 +7,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Custom Builder
+
+// Add Localization to the container
+builder.Services.AddLocalization();
+
+// Default Builder
+
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
@@ -39,6 +46,24 @@ builder.Services.AddIdentityCore<ApplicationUser>(options =>
 builder.Services.AddSingleton<IEmailSender<ApplicationUser>, IdentityNoOpEmailSender>();
 
 var app = builder.Build();
+
+// Custom Config
+
+// Configure localization
+var supportedCultures = new[]
+{
+    "es",
+    "en"
+};
+
+var localizationOptions = new RequestLocalizationOptions()
+        .SetDefaultCulture("en")
+        .AddSupportedCultures(supportedCultures)
+        .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
+
+// Default Config
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,0 +1,174 @@
+﻿@using Michi.Resources
+@using Microsoft.Extensions.Localization
+@inject IStringLocalizer<SharedResources> Localizer
+
+<header class="site-header">
+	<nav class="nav-menu">
+		
+		<div class="nav-container">
+			
+			<!-- Logo -->
+			<a class="nav-logo" href="/">
+				<span class="nav-logo-text">日本語</span>
+			</a>
+			
+			<!-- Buscador -->
+			<div class="nav-search">
+				<form class="nav-search-form" action="/dictionary" method="get">
+					<label class="nav-search-label" for="nav-search-imput">
+						Buscar
+					</label>
+					
+					<div class="nav-search-wrapper">
+						<span class="nav-search-icon" aria-hidden="true">
+							<!-- Icono de búsqueda -->
+							<svg
+								viewBox="0 0 24 24"
+								width="18"
+								height="18"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<circle cx="11" cy="11" r="7"></circle>
+								<path d="m20 20-4-4"></path>
+							</svg>
+						</span>
+						
+						<input
+							id="nav-search-input"
+							class="nav-search-input"
+							type="search"
+							name="q"
+							   placeholder="@Localizer["SearchPlaceholder"]"
+							autocomplete="off"
+						/>
+						
+						<kbd class="nav-search-shortcut">
+							⌘ K
+						</kbd>
+					</div>
+				</form>
+			</div>
+			
+			<!-- Navegación principal -->
+			<div class="nav-links">
+				
+				<a class="=nav-link" href="/dictionary">
+					<span class="nav-link-label">@Localizer["Dictionary"]</span>
+				</a>
+
+				<a class="=nav-link" href="/learn">
+					<span class="nav-link-label">@Localizer["Learn"]</span>
+				</a>
+
+				<a class="=nav-link" href="/stats">
+					<span class="nav-link-label">@Localizer["Statistics"]</span>
+				</a>
+				
+			</div>
+
+			<!-- Acciones -->
+			<div class="nav-actions">
+
+				<!-- Configuración -->
+				<a
+					class="nav-action nav-settings"
+					href="/config"
+				>
+					<svg
+						viewBox=0 0 24 24"
+						width="20"
+						height="20"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="1.8"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path
+							d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 0 0 0 0 7Z"
+						></path>
+
+						<path
+							d="M19.4 15a1.7 1.7 0 0 0 .34 1.881.06.06-1.8 1.8-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.55V20h-2.55v-.11a1.7 1.7 0 0 0-1.03-1.55 1.7 1.7 0 0 0-1.88.34l-.06.06-1.8-1.8.06-.06A1.7 1.7 0 0 0 8.1 15a1.7 1.7 0 0 0-1.55-1.03H6.44v-2.55h.11A1.7 1.7 0 0 0 8.1 10.4a1.7 1.7 0 0 0-.34-1.88l-.06-.06 1.8-1.8.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1.03-1.55V5h2.55v.11a1.7 1.7 0 0 0 1.03 1.55 1.7 1.7 0 0 0 1.88-.34l.06-.06 1.8 1.8-.06.06A1.7 1.7 0 0 0 19.4 10.4a1.7 1.7 0 0 0 1.55 1.03H21v2.55h-.05A1.7 1.7 0 0 0 19.4 15Z"
+						></path>
+					</svg>
+				</a>
+
+				<!-- Cuenta -->
+				<a
+					class="nav-account"
+					href="/account"
+				>
+					<span class=" nav-account-avatar">
+						<svg
+							viewBox="0 0 24 24"
+							width="20"
+							height="20"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						>
+							<circle cx="12" cy="8" r="3.5"></circle>
+							<path d="M5 20c.8-3.2 3.1-5 7-5s6.2 1.8 7 5"></path>
+						</svg>
+					</span>
+
+					<span class="nav-acount-label">
+						@Localizer["LogIn"]
+					</span>
+				</a>
+
+			</div>
+
+			<!-- Menú móvil -->
+			<button 
+				class="nav-mobile-toggle" 
+				type="button" 
+				aria-controls="mobile-navigation"
+			>
+				<span class="nav-mobile-toggle-line"></span>
+				<span class="nav-mobile-toggle-line"></span>
+				<span class="nav-mobile-toggle-line"></span>
+			</button>
+		</div> 
+
+		<!-- Navegación móvil -->
+		<div 
+			class="nav-mobile"
+			id="mobile-navigation"
+			hidden
+		>
+			<div class="nav-mobile-content">
+				
+				<a class="nav-mobile-link" href="/dictionary">
+					Diccionario
+				</a>
+				
+				<a class="nav-mobile-link" href="/learn">
+					Aprender
+				</a>
+				
+				<a class="nav-mobile-link" href="/stats">
+					Estadísticas
+				</a>
+				
+				<a class="nav-mobile-link" href="/config">
+					Configuración
+				</a>
+				
+				<a class="nav-mobile-link" href="/acount">
+					Mi cuenta
+				</a>
+
+			</div>
+		</div>
+		
+	</nav>
+</header>
+ 

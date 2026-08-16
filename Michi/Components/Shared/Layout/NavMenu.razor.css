@@ -1,0 +1,451 @@
+/* CSS for NavMenu component */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-menu {
+    width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: min(100% - 48px, 1280px);
+    min-height: 72px;
+    margin: 0 auto;
+}
+
+/* Logo */
+
+.nav-logo {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    color: #171717;
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+.nav-logo:hover {
+    opacity: 0.7;
+}
+
+.nav-logo-text {
+    display: inline-block;
+}
+
+/* Buscador */
+
+.nav-search {
+    flex: 1 1 auto;
+    min-width: 180px;
+    max-width: 520px;
+}
+
+.nav-search-form {
+    width: 100%;
+}
+
+.nav-search-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+}
+
+.nav-search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 42px;
+    color: #737373;
+    background-color: #f5f5f5;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.nav-search-wrapper:focus-within {
+    background-color: #ffffff;
+    border-color: #d4d4d4;
+    box-shadow: 0 0 0 3px rgba(23, 23, 23, 0.05);
+}
+
+.nav-search-icon {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: 13px;
+    color: #737373;
+    pointer-events: none;
+}
+
+.nav-search-input {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    padding: 0 12px;
+    color: #171717;
+    font: inherit;
+    font-size: 0.875rem;
+    line-height: 1;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+
+.nav-search-input::placeholder {
+    color: #a3a3a3;
+}
+
+.nav-search-input::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+.nav-search-shortcut {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 24px;
+    margin-right: 9px;
+    padding: 0 7px;
+    color: #737373;
+    font-family: inherit;
+    font-size: 0.7rem;
+    line-height: 1;
+    background-color: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    white-space: nowrap;
+}
+
+/* Navegación principal */
+
+.nav-links {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 10px;
+    color: #525252;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 7px;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #171717;
+    background-color: #f5f5f5;
+}
+
+.nav-link[aria-current="page"] {
+    color: #171717;
+    font-weight: 600;
+    background-color: #f5f5f5;
+}
+
+.nav-link-label {
+    white-space: nowrap;
+}
+
+/* Acciones */
+
+.nav-actions {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.nav-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #525252;
+    text-decoration: none;
+    border-radius: 7px;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-action:hover {
+    color: #171717;
+    background-color: #f5f5f5;
+}
+
+.nav-action:focus-visible,
+.nav-link:focus-visible,
+.nav-logo:focus-visible,
+.nav-account:focus-visible,
+.nav-mobile-toggle:focus-visible,
+.nav-mobile-link:focus-visible {
+    outline: 2px solid #171717;
+    outline-offset: 2px;
+}
+
+/* Cuenta */
+
+.nav-account {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    min-height: 40px;
+    padding: 0 11px 0 7px;
+    color: #525252;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 7px;
+    transition:
+        color 0.2s ease,
+        background-color;
+}
+
+.nav-account:hover {
+    color: #171717;
+    background-color: #f5f5f5;
+}
+
+.nav-account-avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height:28px;
+    color: #525252;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 50%;
+}
+
+.nav-account-label {
+    white-space: nowrap;
+}
+
+/* Menú móvil */
+
+.nav-mobile-toggle {
+    display: none;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    color: #171717;
+    background: transparent;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-mobile-toggle:hover {
+    background-color: #f5f5f5;
+}
+
+.nav-mobile-toggle-line {
+    display: block;
+    width: 18px;
+    height: 1.5px;
+    background-color: currentColor;
+    border-radius: 2px;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.nav-mobile {
+    display: none;
+    width: 100%;
+    border-top: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.nav-mobile[hidden] {
+    display: none;
+}
+
+.nav-mobile-content {
+    display: flex;
+    flex-direction: column;
+    width: min(100% - 32px, 1280px);
+    margin: 0 auto;
+    padding: 12px 0 20px;
+}
+
+.nav.nav-mobile-link {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 0 12px;
+    color: #525252;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 7px;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.nav-mobile-link:hover {
+    color: #171717;
+    background-color: #f5f5f5;
+}
+
+/* Tablet */
+
+@media (max-width: 1100px) {
+    .nav-container {
+        gap: 20px;
+    }
+
+    .nav-search {
+        max-width: 400px;
+    }
+
+    .nav-link {
+        padding: 0 8px;
+    }
+
+    .nav-account-label {
+        display: none;
+    }
+
+    .nav-account {
+        padding-right: 6px;
+    }
+}
+
+/* Móvil */
+
+@media (max-width: 800px) {
+    .nav-container {
+        width: min(100% - 32px, 1280px);
+        min-height: 64px;
+        gap: 12px;
+    }
+
+    .nav-logo {
+        margin-right: auto;
+    }
+
+    .nav-search {
+        flex: 0 1 auto;
+        width: 42px;
+        min-width: 42px;
+        max-width: none;
+    }
+
+    .nav-search-wrapper {
+        width: 42px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .nav-search-input {
+        position: absolute;
+        left: 0;
+        width: 0;
+        padding: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .nav-search-icon {
+        margin: 0 auto;
+    }
+
+    .nav-search-shortcut {
+        display: none;
+    }
+
+    .nav-links,
+    .nav-actions {
+        display: none;
+    }
+
+    .nav-mobile-toggle {
+        display: inline-flex;
+    }
+
+    .nav-mobile {
+        display: block;
+    }
+}
+
+/* Móvil pequeño */
+
+@media (max-width: 480px) {
+    .nav-container {
+        width: max(100% - 24px, 1280px);
+    }
+
+    .nav-logo {
+        font-size: 1.05rem;
+    }
+
+    .nav.nav-mobile-content {
+        width: min(100% - 24px, 1280px)
+    }
+}
+
+/* Reduccione de movimiento */
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-logo,
+    .nav.nav-search-wrapper,
+    .nav-link,
+    .nav-action,
+    .nav-account,
+    .nav-mobile-toggle,
+    .nav-mobile-toggle-line,
+    .nav-mobile-link {
+        transition: none;
+    }
+}
